@@ -1,0 +1,451 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* colors */
+    --white-color: #fff;
+    --black-color: #000;
+    --grey-color: #e2e2e2;
+    --dark-grey-color: #2b2b2b;
+    --pink-color: #E35B6D;
+    --red-color: #cf2e2e;
+
+    --high-contrast-pink: #FF00FF;
+
+    /* colors voor achtergrond*/
+    --main-bg-color: #9D8FC4;
+    --blue-bg-color: #B7E2E7;
+    --green-bg-color: #19B27D;
+    --beige-bg-color: #F6F2E7;
+    --yellow-bg-color: #FFC654;
+    --dark-grey-bg-color: #141414;
+
+    /* font sizes */
+    --heading-1: 4.875rem;
+    --heading-2: 2em;
+    --heading-3: 2em;
+    --body-text: 1.15em;
+    --body-large: 1.8em;
+    --a-text: 1.8em;
+
+    /* line heights */
+    --headings-line-height: 1;
+
+    /* border radius */
+    --border-radius: 0.6em;
+}
+
+
+/***********/
+/* Hier staan alle codes voor de darkmode function*/
+/***********/
+@media (prefers-color-scheme: dark) {
+    :root {
+        --main-bg-color: var(--dark-grey-bg-color);
+        --blue-bg-color: var(--dark-grey-bg-color);
+        --green-bg-color: var(--dark-grey-bg-color);
+        --beige-bg-color: var(--dark-grey-bg-color);
+        --yellow-bg-color: var(--dark-grey-bg-color);
+        --black-color: #fff;
+        --white-color: #000;
+        --grey-color: var(--dark-grey-color);
+
+    }
+
+    section:nth-of-type(6) ul li,
+    section:nth-of-type(7) ul li,
+    .slider-section ul li {
+        background-color: var(--dark-grey-color) !important;
+    }
+
+    section:nth-of-type(8) img,
+    footer img {
+        filter: invert(1);
+    }
+
+
+}
+
+/***********/
+/* Hier eindigen alle codes voor de darkmode function*/
+/***********/
+
+
+
+/***********/
+/* Hier staan alle codes voor de hhoogcontrast mode*/
+/***********/
+@media (prefers-contrast: more) {
+    :root {
+        --main-bg-color: #000;
+        --blue-bg-color: #000;
+        --green-bg-color: #000;
+        --beige-bg-color: #000;
+        --yellow-bg-color: #000;
+        --black-color: #fff;
+        --white-color: #000;
+    }
+
+    label {
+        border: solid 0.15em var(--high-contrast-pink) !important;
+    }
+
+    section:nth-of-type(2) label:has(input:checked) {
+        background-color: var(--high-contrast-pink) !important;
+    }
+
+
+    button {
+        background-color: var(--high-contrast-pink) !important;
+        color: var(--black-color) !important;
+    }
+
+    a span {
+        background-color: var(--high-contrast-pink) !important;
+    }
+
+    section:nth-of-type(4) fieldset:nth-of-type(2) label {
+        border: none !important;
+    }
+
+    select {
+        border: solid 0.15em var(--high-contrast-pink) !important;
+    }
+
+    section:nth-of-type(6) ul li,
+    section:nth-of-type(7) ul li {
+        background-color: var(--dark-grey-color) !important;
+    }
+
+    section:nth-of-type(8) img,
+    footer img {
+        filter: invert(1);
+    }
+
+    input {
+        border-bottom: solid 0.2em var(--high-contrast-pink) !important;
+    }
+
+    section:nth-of-type(8) fieldset label {
+        border: none !important;
+    }
+
+    details {
+        border-bottom: solid .15em var(--high-contrast-pink) !important;
+    }
+
+    footer summary {
+        color: var(--white-color) !important;
+    }
+}
+
+/***********/
+/* Hier eindigen alle codes voor de hoogcontrast mode*/
+/***********/
+
+
+/***********/
+/* Hier eindigen alle codes voor het inladen de typografie*/
+/***********/
+@font-face {
+    font-family: Inter;
+    src: url(../fonts/Inter-Regular.latin.woff2);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(../fonts/Inter-Medium.latin.woff2);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(../fonts/Inter-Bold-latin.woff2);
+    font-weight: 700;
+}
+
+/***********/
+/* Hier eindigen alle codes voor het inladen de typografie*/
+/***********/
+
+html {
+    overflow-x: hidden;
+    font: inherit;
+}
+
+body {
+    background: var(--main-bg-color);
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+section {
+    padding: 3.75em 2.2em;
+    transition: 2s ease-in-out;
+}
+
+/***********/
+/* Hier staan alle codes voor de styling van de typografie*/
+/***********/
+h1 {
+    margin-block-end: -5rem;
+    font-size: var(--heading-1);
+    line-height: var(--headings-line-height);
+    text-align: center;
+    word-break: break-word;
+
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+    position: relative;
+    z-index: 1;
+    color: var(--black-color);
+}
+
+h2 {
+    font-size: var(--heading-2);
+    line-height: var(--headings-line-height);
+    font-weight: 700;
+    color: var(--black-color);
+}
+
+
+h3 {
+    font-size: var(--heading-3);
+    font-weight: 700;
+    color: var(--black-color);
+}
+
+a {
+    color: var(--black-color);
+    text-decoration: none;
+    font-weight: 700;
+    width: fit-content;
+}
+
+p {
+    font-size: var(--body-text);
+    color: var(--black-color);
+    font-weight: 400;
+    line-height: 1.75em;
+}
+
+span {
+    font-family: sans-serif;
+}
+
+strong {
+    color: var(--black-color);
+}
+
+figcaption {
+    color: var(--black-color);
+}
+
+/***********/
+/* Hier eindigen alle codes voor de styling van de typografie*/
+/***********/
+
+
+/***********/
+/* Hier staan alle codes voor de styling van de lijsten*/
+/***********/
+ul {
+    list-style: none;
+}
+
+li {
+    font-weight: 400;
+}
+
+ul li a span {
+    background-color: black;
+    color: white;
+    padding: 1em 1.5em 1em 2.5em;
+    border-radius: 0.5em;
+}
+
+/***********/
+/* Hier eindigen alle codes voor de styling van de lijsten*/
+/***********/
+
+
+/***********/
+/* Hier staat alle codes voor de styling van de beeld materiaal*/
+/***********/
+img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius)
+}
+
+video {
+    margin-left: -2.2em;
+    width: calc(100% + 4.4em);
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    margin-bottom: 1em;
+}
+
+figcaption {
+    font-size: .8em;
+    display: flex;
+    align-items: center;
+}
+
+figcaption::before {
+    content: "";
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: .5em;
+    aspect-ratio: 1 / 1;
+    border: solid .15em var(--black-color);
+    border-radius: 50%;
+    margin-right: 1em;
+}
+
+/***********/
+/* Hier eindigen alle codes voor de styling van de beeld materiaal*/
+/***********/
+
+button {
+    border: none;
+    font-size: var(--body-large);
+}
+
+progress {
+    width: 70%;
+    height: .5em;
+}
+
+label {
+    border: solid 0.15em var(--black-color);
+    border-radius: 0.5em;
+    display: flex;
+    padding: 0.5em 1em;
+    line-height: 1.875;
+    color: var(--black-color);
+}
+
+label:has([type="radio"]:checked) {
+    background-color: var(--white-color);
+}
+
+fieldset {
+    border: none;
+}
+
+div:has(img) {
+    gap: 1em;
+    display: flex;
+    align-items: start;
+}
+
+/***********/
+/* Hier staat de code voor de visueel hidden van elementeen */
+/***********/
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+/***********/
+/* Hier staan alle codes voor de styling van de de states voor links */
+/***********/
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:focus-visible {
+    outline: solid .2em var(--black-color);
+    outline-offset: .2em;
+}
+
+a:active {
+    color: var(--dark-grey-color);
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a span:hover {
+    background: var(--pink-color);
+}
+
+/***********/
+/* Hier eindigen alle codes voor de styling van de de states voor links */
+/***********/
+
+
+
+
+/***********/
+/* Hier staan alle codes voor de styling van de de states voor buttons */
+/***********/
+
+button:hover {
+    background-color: var(--pink-color);
+}
+
+button:focus {
+    outline: none;
+}
+
+button:active {
+    background: var(--white-color);
+    color: var(--black-color);
+}
+
+button:visited {
+    color: var(--red-color);
+}
+
+button:disabled {
+    background-color: var(--grey-color);
+    color: var(--dark-grey-color);
+    cursor: not-allowed;
+}
+
+
+button[type="submit"]:hover {
+    background-color: var(--pink-color);
+}
+
+button[type="submit"]:focus {
+    outline: none;
+}
+
+button[type="submit"]:active {
+    background: var(--white-color);
+    color: var(--black-color);
+}
+
+button[type="submit"]:visited {
+    color: var(--red-color);
+}
+
+button[type="submit"]:disabled {
+    background-color: var(--grey-color);
+    color: var(--dark-grey-color);
+    cursor: not-allowed;
+}
+
+/***********/
+/* Hier eindigen alle codes voor de styling van de de states voor buttons */
+/***********/

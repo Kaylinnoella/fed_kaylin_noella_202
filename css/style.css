@@ -1,0 +1,538 @@
+section:nth-of-type(1) {
+  padding: 1em;
+}
+
+/***********/
+/* Hier staan alle codes voor section 2*/
+/***********/
+section:nth-of-type(2) {
+  padding: 1em;
+}
+
+section:nth-of-type(2) fieldset {
+  display: grid;
+  gap: .5em;
+}
+
+section:nth-of-type(2) fieldset:nth-of-type(2) {
+  position: absolute;
+  left: -9999em;
+}
+
+
+section:nth-of-type(2) fieldset:nth-of-type(1):has(:checked) {
+  position: absolute;
+  left: -9999em;
+}
+
+section:nth-of-type(2) fieldset:nth-of-type(1):has(:checked)+fieldset {
+  position: static;
+  left: unset;
+}
+
+section:nth-of-type(2) button {
+  border: solid .15em var(--black-color);
+  background: transparent;
+  color: var(--black-color);
+  border-radius: 0.5em;
+  font-family: 'Inter';
+  font-size: 1em;
+  text-align: center;
+  width: fit-content;
+  padding: 1em;
+}
+
+
+section:nth-of-type(2) label:has(input:checked) {
+  background-color: var(--beige-bg-color);
+  border: solid .15em var(--beige-bg-color);
+}
+
+
+section:nth-of-type(2) label:has(input:checked)~button {
+  background-color: var(--black-color);
+  color: var(--beige-bg-color);
+  font-weight: 600;
+}
+/***********/
+/* Hier eindigt alle codes voor section 2*/
+/***********/
+
+
+/***********/
+/* Hier staat alle codes voor section 3*/
+/***********/
+section:nth-of-type(3) {
+  background: var(--main-bg-color);
+}
+
+section:nth-of-type(3) ul {
+  display: flex;
+  transition: transform 0.5s ease;
+
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  /* white-space: nowrap; */
+  scroll-behavior: smooth;
+  overflow: visible;
+  gap: 2.18em;
+}
+
+section:nth-of-type(3) h3 {
+  margin-bottom: 1em;
+}
+
+section:nth-of-type(3) ul li {
+  display: grid;
+  min-width: 100%;
+  scroll-snap-stop: always;
+  scroll-snap-align: center;
+}
+
+section:nth-of-type(3) ul li img {
+  order: 2;
+  margin-bottom: 2em;
+}
+
+section:nth-of-type(3) ul li p {
+  order: 3;
+  margin-bottom: 1em;
+}
+
+section:nth-of-type(3) a {
+  order: 4;
+}
+
+section:nth-of-type(3) button {
+  background: transparent;
+  color: var(--black-color);
+}
+
+section:nth-of-type(3) a::before {
+  content: " →";
+  font-family: sans-serif;
+  padding-right: 1em;
+}
+/***********/
+/* Hier eindigt alle codes voor section 3*/
+/***********/
+
+
+/***********/
+/* Hier staat alle codes voor section 4*/
+/***********/
+section:nth-of-type(4) {
+  background: var(--blue-bg-color);
+}
+
+section:nth-of-type(4) h2,
+h3 {
+  margin-bottom: 1em;
+}
+
+section:nth-of-type(4) p {
+  margin-bottom: 2.5em;
+}
+
+section:nth-of-type(4) fieldset {
+  display: flex;
+  gap: 0.7em;
+  flex-wrap: wrap;
+  margin-bottom: 1.75em;
+}
+
+section:nth-of-type(4) fieldset:nth-of-type(2) label {
+  border: none;
+  font-size: var(--body-text);
+  padding: 0;
+}
+
+section:nth-of-type(4) fieldset:nth-of-type(2) select {
+  border: solid .15em var(--black-color);
+  padding: 1em;
+  background-color: transparent;
+  border-radius: 0.5em;
+  width: 100%;
+  color: var(--black-color);
+}
+
+section:nth-of-type(4) label {
+  width: fit-content;
+}
+
+
+section:nth-of-type(4) label:has(input:checked) {
+  background-color: var(--beige-bg-color);
+  border: solid .15em var(--beige-bg-color);
+}
+
+
+section:nth-of-type(4) label:has(input:checked)~button {
+  background-color: var(--black-color);
+  color: var(--beige-bg-color);
+  font-weight: 600;
+}
+
+section:nth-of-type(4) button {
+  background-color: var(--black-color);
+  color: var(--beige-bg-color);
+  font-weight: 600;
+  padding: 1em;
+  font-size: 1em;
+  border-radius: 0.5em;
+  margin-bottom: 2em;
+  justify-self: start;
+}
+/***********/
+/* Hier eindigt alle codes voor section 4*/
+/***********/
+
+/***********/
+/* Hier staat alle codes voor section 5*/
+/***********/
+section:nth-of-type(5) {
+  background: var(--green-bg-color);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 0.3em;
+}
+
+section:nth-of-type(5) h2 {
+  margin-bottom: .5em;
+}
+
+section:nth-of-type(5) ul {
+  display: flex;
+  transition: transform 0.5s ease;
+
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  overflow: visible;
+  gap: 2.18em;
+}
+
+section:nth-of-type(5) ul li {
+  aspect-ratio: 4/3;
+  flex-shrink: 0;
+  width: 17.5em;
+  scroll-snap-stop: always;
+  scroll-snap-align: start;
+}
+
+section:nth-of-type(5) ul a {
+  padding: 1em;
+  max-width: 28em;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  color: var(--white-color);
+  width: 100%;
+  order: 1;
+}
+
+section:nth-of-type(5) ul li img {
+  margin-bottom: 2em;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  object-position: 50% 25%;
+  object-fit: cover;
+
+  border-radius: .25em;
+}
+
+section:nth-of-type(5) ul li h3 {
+  order: 2;
+  position: relative;
+  z-index: 1;
+  font-size: 1em;
+  color: var(--white-color);
+}
+
+section:nth-of-type(5) a {
+  font-size: 1em;
+  margin-bottom: 1.5em;
+}
+
+
+section:nth-of-type(5) button {
+  background: transparent;
+  color: var(--black-color);
+}
+/***********/
+/* Hier eindigt alle codes voor section 5*/
+/***********/
+
+/***********/
+/* Hier staat alle codes voor section 6*/
+/***********/
+section:nth-of-type(6) {
+  background-color: var(--beige-bg-color);
+}
+
+section:nth-of-type(6) h2 {
+  margin-bottom: 1em;
+}
+
+section:nth-of-type(6) p {
+  margin-bottom: 1em;
+}
+
+section:nth-of-type(6) ul {
+  margin-top: 3em;
+}
+
+section:nth-of-type(6) ul li {
+  background-color: var(--beige-bg-color);
+  padding: 1.5em;
+  display: grid;
+  margin-bottom: 2em;
+  border-radius: .5em;
+}
+
+section:nth-of-type(6) ul li h3 {
+  order: 2;
+  font-size: 1.125em;
+}
+
+section:nth-of-type(6) ul li p:nth-of-type(2) {
+  order: 3;
+  line-height: 1.8em;
+  margin-bottom: 4em;
+}
+
+section:nth-of-type(6) ul li img {
+  order: 1;
+  margin-bottom: 2em;
+}
+
+section:nth-of-type(6) ul li a {
+  order: 6;
+}
+/***********/
+/* Hier eindigt alle codes voor section 6*/
+/***********/
+
+/***********/
+/* Hier staat alle codes voor section 7*/
+/***********/
+section:nth-of-type(7) {
+  background-color: var(--yellow-bg-color);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 0.3em;
+}
+
+section:nth-of-type(7) h2 {
+  margin-bottom: 1em;
+}
+
+.slider-section ul {
+  display: flex;
+  transition: transform 0.5s ease;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  overflow: visible;
+  gap: 2.18em;
+  margin-bottom: 2em;
+}
+
+.slider-section ul li {
+  flex-shrink: 0;
+  padding: .625em;
+  width: 17.5em;
+  background-color: var(--blue-bg-color);
+  border-radius: .5em;
+  display: grid;
+  scroll-snap-stop: always;
+  scroll-snap-align: center;
+  height: 35em;
+  max-height: 35em;
+}
+
+.slider-section ul li p:nth-of-type(1) {
+  order: 1;
+}
+
+.slider-section ul li p:nth-of-type(2) {
+  order: 3;
+  margin-bottom: 7em;
+}
+
+.slider-section ul li h3 {
+  order: 2;
+}
+
+.slider-section ul li a {
+  order: 4;
+}
+
+.slider-section button {
+  background: transparent;
+  color: var(--black-color);
+}
+
+.slider-section ul li:nth-of-type(2) {
+  background-color: var(--green-bg-color);
+}
+
+.slider-section ul li:nth-of-type(3) {
+  background-color: var(--main-bg-color);
+}
+/***********/
+/* Hier eindigt alle codes voor section 7*/
+/***********/
+
+
+/***********/
+/* Hier staat alle codes voor section 8*/
+/***********/
+section:nth-of-type(8) {
+  background-color: var(--yellow-bg-color);
+}
+
+section:nth-of-type(8) h2 {
+  margin-bottom: .5em;
+}
+
+section:nth-of-type(8)>p:first-of-type {
+  margin-bottom: 1.8em;
+}
+
+section:nth-of-type(8) ul {
+  display: grid;
+  gap: 1em;
+  margin-bottom: 1.5em;
+}
+
+section:nth-of-type(8) ul li {
+  display: flex;
+  gap: 1em;
+}
+
+section:nth-of-type(8) ul li p {
+  order: 2;
+}
+
+section:nth-of-type(8) ul li img {
+  height: 1.25em;
+  width: 1.25em;
+  order: 1;
+}
+
+section:nth-of-type(8) a {
+  display: flex;
+  gap: 1em;
+  font-weight: 700;
+  margin-bottom: 2em;
+}
+
+section:nth-of-type(8) fieldset {
+  display: grid;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+
+section:nth-of-type(8) fieldset label {
+  display: block;
+  width: 100%;
+  display: grid;
+  align-items: center;
+  position: relative;
+  border: none;
+  padding: .5em .5em .5em 0;
+}
+
+section:nth-of-type(8) label:has([required])::after {
+  content: "*";
+  position: absolute;
+  right: 1em;
+}
+
+section:nth-of-type(8) fieldset label span {
+  position: absolute;
+  transition: .3s;
+  left: 0.5em;
+}
+
+section:nth-of-type(8) fieldset input {
+  width: 100%;
+  padding: .5em 2em .5em .5em;
+  border: none;
+  appearance: none;
+  border-bottom: solid .2em var(--black-color);
+  background: none;
+}
+
+section:nth-of-type(8) fieldset input:focus {
+  outline: none;
+}
+
+
+section:nth-of-type(8) fieldset label:focus-within span,
+label:has(input:not(:placeholder-shown)) span {
+  translate: 0 -1rem;
+  font-size: .7em;
+}
+
+section:nth-of-type(8) button {
+  background-color: var(--black-color);
+  color: var(--beige-bg-color);
+  font-weight: 600;
+  padding: 1em;
+  font-size: 1em;
+  border-radius: 0.5em;
+  margin-bottom: 2em;
+  justify-self: start;
+}
+/***********/
+/* Hier eindigt alle codes voor section 8*/
+/***********/
+
+
+/***********/
+/* Hier staat alle codes voor het veranderen van de achtergond kleur van de section*/
+/***********/
+section:nth-of-type(1).inBeeld {
+  background-color: var(--main-bg-color);
+}
+
+section:nth-of-type(2).inBeeld {
+  background-color: var(--main-bg-color);
+}
+
+section:nth-of-type(3).inBeeld {
+  background-color: var(--blue-bg-color);
+}
+
+section:nth-of-type(4).inBeeld {
+  background-color: var(--green-bg-color);
+}
+
+section:nth-of-type(5).inBeeld {
+  background-color: var(--beige-bg-color);
+}
+
+section:nth-of-type(6).inBeeld {
+  background-color: var(--yellow-bg-color);
+}
+
+section:nth-of-type(7).inBeeld {
+  background-color: var(--beige-bg-color);
+}
+
+section:nth-of-type(8).inBeeld {
+  background-color: var(--yellow-bg-color);
+}
